@@ -7,6 +7,7 @@ module.exports = function longestConsecutiveLength(array) {
         return 1;
     }
 
+
    	var count = 0;
     array.sort(function(a,b){return a-b;})
     var arr = [];
@@ -19,6 +20,9 @@ module.exports = function longestConsecutiveLength(array) {
             arr.push(count);
         }
     } 
+    if(arr.length === 0){
+    	return 1;
+    }
  	var max = Math.max.apply(Math, arr);
     return max+1; 
 }
